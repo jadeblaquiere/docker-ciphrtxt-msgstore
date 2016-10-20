@@ -17,7 +17,7 @@ ENV NAKPRIV 0000000000000000000000000000000000000000000000000000000000000000
 EXPOSE 7754
 
 # install msgstore
-RUN (cd /home/ciphrtxt && git clone https://github.com/jadeblaquiere/msgstore.git)RUN echo "### create msggages, recv directories"
+RUN (cd /home/ciphrtxt && git clone https://github.com/jadeblaquiere/msgstore.git)
 RUN (cd /home/ciphrtxt/msgstore && mkdir messages && mkdir recv)
 
 RUN echo "#!/usr/bin/env sh" > /home/ciphrtxt/run.sh
