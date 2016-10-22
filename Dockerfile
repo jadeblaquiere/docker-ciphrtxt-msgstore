@@ -18,7 +18,6 @@ EXPOSE 7754
 
 # install msgstore
 RUN (cd /home/ciphrtxt && git clone https://github.com/jadeblaquiere/msgstore.git)
-RUN (cd /home/ciphrtxt/msgstore && mkdir messages && mkdir recv)
 
 RUN echo "#!/usr/bin/env sh" > /home/ciphrtxt/run.sh
 RUN echo "if [ \$EXTHOSTNAME = \"localhost\" ] && [ \$DOCKERCLOUD_CONTAINER_FQDN != \"\" ] ; then export EXTHOSTNAME=\$DOCKERCLOUD_CONTAINER_FQDN ; fi" >> /home/ciphrtxt/run.sh
